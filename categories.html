@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-left">
+                <div class="top-bar-item">
+                    <i class="fas fa-truck"></i>
+                    <span>Free Next Day Delivery</span>
+                </div>
+            </div>
+            <div class="top-bar-right">
+                <div class="top-bar-item">
+                    <i class="fas fa-headset"></i>
+                    <span>24/7 Customer Support</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo-wrap">
+                <a href="index.html" class="logo">
+                    <img src="images/ecomm logo.png" alt="Stackly Logo" class="logo-img">
+                    Stack<span>ly</span>
+                </a>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for products...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="header-actions">
+                <a href="404.html" class="header-btn">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Location</span>
+                </a>
+                <a href="login.html" class="header-btn">
+                    <i class="fas fa-user"></i>
+                    <span>My Account</span>
+                </a>
+                <a href="404.html" class="header-btn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>Cart</span>
+                    <span class="cart-badge">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <button class="mobile-menu-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="container">
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="section1" data-aos="fade-up">
+        <div class="container">
+            <h1>Product Categories</h1>
+            <p>Browse our extensive collection by category</p>
+        </div>
+    </section>
+
+    <!-- Section 2: Kitchen -->
+    <section class="categories" id="section2">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Kitchen Appliances</h2>
+            <div class="category-grid">
+                <div class="category-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="category-image"><img src="images/1.webp" alt="Blenders & Mixers" loading="lazy"></div>
+                    <div class="category-info">
+                        <h3>Blenders & Mixers</h3>
+                        <p>Professional kitchen tools</p>
+                    </div>
+                </div>
+                <div class="category-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="category-image"><img src="images/coffeemaker.webp" alt="Coffee Makers" loading="lazy"></div>
+                    <div class="category-info">
+                        <h3>Coffee Makers</h3>
+                        <p>Start your day right</p>
+                    </div>
+                </div>
+                <div class="category-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="category-image"><img src="images/foodprocessor.webp" alt="Food Processors" loading="lazy"></div>
+                    <div class="category-info">
+                        <h3>Food Processors</h3>
+                        <p>Efficient meal prep</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Refrigeration -->
+    <section class="categories" id="section3" style="background: var(--light-bg);">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Refrigeration & Freezers</h2>
+            <div class="category-grid">
+                <div class="category-card" data-aos="zoom-in">
+                    <div class="category-image"><img src="images/fridge.webp" alt="Refrigerators" loading="lazy"></div>
+                    <div class="category-info">
+                        <h3>Refrigerators</h3>
+                        <p>Keep food fresh longer</p>
+                    </div>
+                </div>
+                <div class="category-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="category-image"><img src="images/freezer.webp" alt="Freezers" loading="lazy"></div>
+                    <div class="category-info">
+                        <h3>Freezers</h3>
+                        <p>Extra storage space</p>
+                    </div>
+                </div>
+                <div class="category-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="category-image"><img src="images/2.webp" alt="Wine Coolers" loading="lazy"></div>
+                    <div class="category-info">
+                        <h3>Wine Coolers</h3>
+                        <p>Perfect temperature storage</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Laundry -->
+    <section class="categories" id="section4">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Laundry Appliances</h2>
+            <div class="category-grid">
+                <div class="category-card" data-aos="slide-up">
+                    <div class="category-image"><img src="images/4.webp" alt="Washing Machines" loading="lazy"></div>
+                    <div class="category-info">
+                        <h3>Washing Machines</h3>
+                        <p>Clean clothes efficiently</p>
+                    </div>
+                </div>
+                <div class="category-card" data-aos="slide-up" data-aos-delay="100">
+                    <div class="category-image"><img src="images/dryer.webp" alt="Dryers" loading="lazy"></div>
+                    <div class="category-info">
+                        <h3>Dryers</h3>
+                        <p>Quick drying solutions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Cooking -->
+    <section class="categories" id="section5" style="background: var(--light-bg);">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Cooking Appliances</h2>
+            <div class="category-grid">
+                <div class="category-card" data-aos="flip-left">
+                    <div class="category-image"><img src="images/stove.webp" alt="Stoves & Ranges" loading="lazy"></div>
+                    <div class="category-info">
+                        <h3>Stoves & Ranges</h3>
+                        <p>Professional cooking</p>
+                    </div>
+                </div>
+                <div class="category-card" data-aos="flip-left" data-aos-delay="100">
+                    <div class="category-image"><img src="images/oven.webp" alt="Ovens" loading="lazy"></div>
+                    <div class="category-info">
+                        <h3>Ovens</h3>
+                        <p>Perfect baking results</p>
+                    </div>
+                </div>
+                <div class="category-card" data-aos="flip-left" data-aos-delay="200">
+                    <div class="category-image"><img src="images/oven.webp" alt="Microwaves" loading="lazy"></div>
+                    <div class="category-info">
+                        <h3>Microwaves</h3>
+                        <p>Quick heating solutions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Dishwashers -->
+    <section class="categories" id="section6">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Dishwashers & Sinks</h2>
+            <div class="category-grid">
+                <div class="category-card" data-aos="fade-right">
+                    <div class="category-image"><img src="images/dishwaher.webp" alt="Dishwashers" loading="lazy"></div>
+                    <div class="category-info">
+                        <h3>Dishwashers</h3>
+                        <p>Sparkling clean dishes</p>
+                    </div>
+                </div>
+                <div class="category-card" data-aos="fade-left">
+                    <div class="category-image"><img src="images/portable dishwaher.webp" alt="Kitchen Sinks" loading="lazy"></div>
+                    <div class="category-info">
+                        <h3>Kitchen Sinks</h3>
+                        <p>Stylish & functional</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Electronics -->
+    <section class="categories" id="section7" style="background: var(--light-bg);">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Electronics & Entertainment</h2>
+            <div class="category-grid">
+                <div class="category-card" data-aos="zoom-out">
+                    <div class="category-image"><img src="images/3.webp" alt="Televisions" loading="lazy"></div>
+                    <div class="category-info">
+                        <h3>Televisions</h3>
+                        <p>4K & Smart TVs</p>
+                    </div>
+                </div>
+                <div class="category-card" data-aos="zoom-out" data-aos-delay="100">
+                    <div class="category-image"><img src="images/soundbarsystem.webp" alt="Audio Systems" loading="lazy"></div>
+                    <div class="category-info">
+                        <h3>Audio Systems</h3>
+                        <p>Premium sound quality</p>
+                    </div>
+                </div>
+                <div class="category-card" data-aos="zoom-out" data-aos-delay="200">
+                    <div class="category-image"><img src="images/gaming.webp" alt="Gaming" loading="lazy"></div>
+                    <div class="category-info">
+                        <h3>Gaming</h3>
+                        <p>Latest gaming gear</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 8: Climate Control -->
+    <section class="categories" id="section8">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Climate Control</h2>
+            <div class="category-grid">
+                <div class="category-card" data-aos="bounce-in">
+                    <div class="category-image"><img src="images/2.webp" alt="Air Conditioners" loading="lazy"></div>
+                    <div class="category-info">
+                        <h3>Air Conditioners</h3>
+                        <p>Stay cool all summer</p>
+                    </div>
+                </div>
+                <div class="category-card" data-aos="bounce-in" data-aos-delay="100">
+                    <div class="category-image"><img src="images/dryer.webp" alt="Heaters" loading="lazy"></div>
+                    <div class="category-info">
+                        <h3>Heaters</h3>
+                        <p>Warm comfort</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 9: Air Quality -->
+    <section class="categories" id="section9" style="background: var(--light-bg);">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Air Quality Products</h2>
+            <div class="category-grid">
+                <div class="category-card" data-aos="slide-left">
+                        <div class="category-image"><img src="images/airpurifier.webp" alt="Air Purifiers" loading="lazy"></div>
+                        <div class="category-info">
+                        <h3>Air Purifiers</h3>
+                        <p>Breathe clean air</p>
+                    </div>
+                </div>
+                <div class="category-card" data-aos="slide-right">
+                    <div class="category-image"><img src="images/humidifier.webp" alt="Humidifiers" loading="lazy"></div>
+                    <div class="category-info">
+                        <h3>Humidifiers</h3>
+                        <p>Perfect humidity levels</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 10: Cleaning -->
+    <section class="categories" id="section10">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Cleaning Appliances</h2>
+            <div class="category-grid">
+                <div class="category-card" data-aos="rotate">
+                    <div class="category-image"><img src="images/robot vaccum.webp" alt="Vacuum Cleaners" loading="lazy"></div>
+                    <div class="category-info">
+                        <h3>Vacuum Cleaners</h3>
+                        <p>Deep cleaning solutions</p>
+                    </div>
+                </div>
+                <div class="category-card" data-aos="rotate" data-aos-delay="100">
+                    <div class="category-image"><img src="images/steam cleaner.webp" alt="Steam Cleaners" loading="lazy"></div>
+                    <div class="category-info">
+                        <h3>Steam Cleaners</h3>
+                        <p>Chemical-free cleaning</p>
+                    </div>
+                </div>
+                <div class="category-card" data-aos="rotate" data-aos-delay="200">
+                    <div class="category-image"><img src="images/cordeless vaccum.webp" alt="Robot Vacuums" loading="lazy"></div>
+                    <div class="category-info">
+                        <h3>Robot Vacuums</h3>
+                        <p>Automated cleaning</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>About Stackly</h3>
+                    <p>Your trusted partner for quality home appliances and electronics.</p>
+                    <div class="social-links">
+                        <a href="404.html" class="external-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="404.html" class="external-link"><i class="fab fa-twitter"></i></a>
+                        <a href="404.html" class="external-link"><i class="fab fa-instagram"></i></a>
+                        <a href="404.html" class="external-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="categories.html">Categories</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="404.html">Contact Us</a></li>
+                        <li><a href="404.html">Shipping Info</a></li>
+                        <li><a href="404.html">Returns</a></li>
+                        <li><a href="404.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Commerce St, City</li>
+                        <li><i class="fas fa-phone"></i> +1 234 567 890</li>
+                        <li><i class="fas fa-envelope"></i> info@stackly.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Stackly. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

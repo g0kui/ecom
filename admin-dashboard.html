@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h3>Stackly Admin</h3>
+                <p>Management Portal</p>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="#overview" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="#products"><i class="fas fa-box"></i> Products</a></li>
+                <li><a href="#orders"><i class="fas fa-shopping-cart"></i> Orders</a></li>
+                <li><a href="#customers"><i class="fas fa-users"></i> Customers</a></li>
+                <li><a href="#analytics"><i class="fas fa-chart-line"></i> Analytics</a></li>
+                <li><a href="#inventory"><i class="fas fa-warehouse"></i> Inventory</a></li>
+                <li><a href="#reports"><i class="fas fa-file-alt"></i> Reports</a></li>
+                <li><a href="#settings"><i class="fas fa-cog"></i> Settings</a></li>
+                <li><a href="404.html" class="redirect-404"><i class="fas fa-envelope"></i> Messages</a></li>
+                <li><a href="index.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </aside>
+        
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="dashboard-header">
+                <div>
+                    <h1>Admin Dashboard</h1>
+                    <p>Welcome back, Administrator!</p>
+                </div>
+                <div class="header-actions">
+                    <a href="404.html" class="btn btn-primary redirect-404">Add Product</a>
+                    <button class="sidebar-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="dashboard-content">
+                <!-- Overview Section -->
+                <div class="dashboard-section" id="overview">
+                    <h2>Dashboard Overview</h2>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <h3>Total Revenue</h3>
+                            <div class="stat-value">$124,589</div>
+                            <div class="stat-icon"><i class="fas fa-dollar-sign"></i></div>
+                        </div>
+                        <div class="stat-card" style="background: linear-gradient(135deg, #28a745, #20c997);">
+                            <h3>Total Orders</h3>
+                            <div class="stat-value">1,847</div>
+                            <div class="stat-icon"><i class="fas fa-shopping-bag"></i></div>
+                        </div>
+                        <div class="stat-card" style="background: linear-gradient(135deg, #ffc107, #ff9800);">
+                            <h3>Total Customers</h3>
+                            <div class="stat-value">3,542</div>
+                            <div class="stat-icon"><i class="fas fa-users"></i></div>
+                        </div>
+                        <div class="stat-card" style="background: linear-gradient(135deg, #dc3545, #c82333);">
+                            <h3>Products</h3>
+                            <div class="stat-value">486</div>
+                            <div class="stat-icon"><i class="fas fa-box"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Products Section -->
+                <div class="dashboard-section" id="products">
+                    <h2>Product Management</h2>
+                    <div style="margin-bottom: 20px;">
+                        <a href="404.html" class="btn btn-primary redirect-404">Add New Product</a>
+                        <a href="404.html" class="btn btn-secondary redirect-404">Import Products</a>
+                    </div>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Product ID</th>
+                                <th>Name</th>
+                                <th>Category</th>
+                                <th>Price</th>
+                                <th>Stock</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#P001</td>
+                                <td>Premium Refrigerator</td>
+                                <td>Kitchen</td>
+                                <td>$899</td>
+                                <td>45</td>
+                                <td><span style="color: var(--success); font-weight: bold;">Active</span></td>
+                                <td>
+                                    <a href="404.html" class="redirect-404" style="margin-right: 10px;"><i class="fas fa-edit"></i></a>
+                                    <a href="404.html" class="redirect-404"><i class="fas fa-trash"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#P002</td>
+                                <td>Smart Washing Machine</td>
+                                <td>Laundry</td>
+                                <td>$749</td>
+                                <td>32</td>
+                                <td><span style="color: var(--success); font-weight: bold;">Active</span></td>
+                                <td>
+                                    <a href="404.html" class="redirect-404" style="margin-right: 10px;"><i class="fas fa-edit"></i></a>
+                                    <a href="404.html" class="redirect-404"><i class="fas fa-trash"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#P003</td>
+                                <td>55" Smart TV</td>
+                                <td>Electronics</td>
+                                <td>$799</td>
+                                <td>8</td>
+                                <td><span style="color: var(--warning); font-weight: bold;">Low Stock</span></td>
+                                <td>
+                                    <a href="404.html" class="redirect-404" style="margin-right: 10px;"><i class="fas fa-edit"></i></a>
+                                    <a href="404.html" class="redirect-404"><i class="fas fa-trash"></i></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Orders Section -->
+                <div class="dashboard-section" id="orders">
+                    <h2>Order Management</h2>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Customer</th>
+                                <th>Date</th>
+                                <th>Total</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#ORD12345</td>
+                                <td>John Doe</td>
+                                <td>2024-01-15</td>
+                                <td>$1,248.00</td>
+                                <td><span style="color: var(--success); font-weight: bold;">Delivered</span></td>
+                                <td><a href="404.html" class="btn btn-primary redirect-404">View</a></td>
+                            </tr>
+                            <tr>
+                                <td>#ORD12344</td>
+                                <td>Jane Smith</td>
+                                <td>2024-01-14</td>
+                                <td>$899.00</td>
+                                <td><span style="color: var(--warning); font-weight: bold;">Processing</span></td>
+                                <td><a href="404.html" class="btn btn-primary redirect-404">View</a></td>
+                            </tr>
+                            <tr>
+                                <td>#ORD12343</td>
+                                <td>Mike Johnson</td>
+                                <td>2024-01-13</td>
+                                <td>$449.00</td>
+                                <td><span style="color: var(--primary-color); font-weight: bold;">Shipped</span></td>
+                                <td><a href="404.html" class="btn btn-primary redirect-404">View</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Customers Section -->
+                <div class="dashboard-section" id="customers">
+                    <h2>Customer Management</h2>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Customer ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Orders</th>
+                                <th>Total Spent</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#C001</td>
+                                <td>John Doe</td>
+                                <td>john.doe@example.com</td>
+                                <td>24</td>
+                                <td>$5,487</td>
+                                <td><a href="404.html" class="btn btn-primary redirect-404">View</a></td>
+                            </tr>
+                            <tr>
+                                <td>#C002</td>
+                                <td>Jane Smith</td>
+                                <td>jane.smith@example.com</td>
+                                <td>18</td>
+                                <td>$3,299</td>
+                                <td><a href="404.html" class="btn btn-primary redirect-404">View</a></td>
+                            </tr>
+                            <tr>
+                                <td>#C003</td>
+                                <td>Mike Johnson</td>
+                                <td>mike.j@example.com</td>
+                                <td>12</td>
+                                <td>$2,145</td>
+                                <td><a href="404.html" class="btn btn-primary redirect-404">View</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Analytics Section -->
+                <div class="dashboard-section" id="analytics">
+                    <h2>Sales Analytics</h2>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <h3>Today's Sales</h3>
+                            <div class="stat-value">$4,589</div>
+                            <div class="stat-icon"><i class="fas fa-chart-line"></i></div>
+                        </div>
+                        <div class="stat-card" style="background: linear-gradient(135deg, #28a745, #20c997);">
+                            <h3>This Week</h3>
+                            <div class="stat-value">$28,549</div>
+                            <div class="stat-icon"><i class="fas fa-calendar-week"></i></div>
+                        </div>
+                        <div class="stat-card" style="background: linear-gradient(135deg, #ffc107, #ff9800);">
+                            <h3>This Month</h3>
+                            <div class="stat-value">$124,589</div>
+                            <div class="stat-icon"><i class="fas fa-calendar-alt"></i></div>
+                        </div>
+                        <div class="stat-card" style="background: linear-gradient(135deg, #dc3545, #c82333);">
+                            <h3>Conversion Rate</h3>
+                            <div class="stat-value">3.2%</div>
+                            <div class="stat-icon"><i class="fas fa-percentage"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Inventory Section -->
+                <div class="dashboard-section" id="inventory">
+                    <h2>Inventory Management</h2>
+                    <div class="category-grid">
+                        <div class="category-card">
+                            <div class="category-info">
+                                <h3>Low Stock Items</h3>
+                                <div class="stat-value" style="color: var(--danger);">12</div>
+                                <p>Items need restocking</p>
+                                <a href="404.html" class="btn btn-primary redirect-404" style="margin-top: 10px;">View Items</a>
+                            </div>
+                        </div>
+                        <div class="category-card">
+                            <div class="category-info">
+                                <h3>Out of Stock</h3>
+                                <div class="stat-value" style="color: var(--warning);">5</div>
+                                <p>Items out of stock</p>
+                                <a href="404.html" class="btn btn-primary redirect-404" style="margin-top: 10px;">View Items</a>
+                            </div>
+                        </div>
+                        <div class="category-card">
+                            <div class="category-info">
+                                <h3>Total Products</h3>
+                                <div class="stat-value" style="color: var(--success);">486</div>
+                                <p>Active products</p>
+                                <a href="404.html" class="btn btn-primary redirect-404" style="margin-top: 10px;">Manage</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reports Section -->
+                <div class="dashboard-section" id="reports">
+                    <h2>Reports & Exports</h2>
+                    <div class="category-grid">
+                        <div class="category-card">
+                            <div class="category-image">
+                                <i class="fas fa-file-excel"></i>
+                            </div>
+                            <div class="category-info">
+                                <h3>Sales Report</h3>
+                                <p>Download monthly sales data</p>
+                                <a href="404.html" class="btn btn-primary redirect-404">Download</a>
+                            </div>
+                        </div>
+                        <div class="category-card">
+                            <div class="category-image">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+                            <div class="category-info">
+                                <h3>Customer Report</h3>
+                                <p>Customer analytics report</p>
+                                <a href="404.html" class="btn btn-primary redirect-404">Download</a>
+                            </div>
+                        </div>
+                        <div class="category-card">
+                            <div class="category-image">
+                                <i class="fas fa-file-csv"></i>
+                            </div>
+                            <div class="category-info">
+                                <h3>Inventory Report</h3>
+                                <p>Stock levels and movements</p>
+                                <a href="404.html" class="btn btn-primary redirect-404">Download</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Settings Section -->
+                <div class="dashboard-section" id="settings">
+                    <h2>System Settings</h2>
+                    <form>
+                        <div class="form-group">
+                            <label>Store Name</label>
+                            <input type="text" value="Stackly" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Store Email</label>
+                            <input type="email" value="admin@stackly.com" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Currency</label>
+                            <select class="form-control">
+                                <option>USD - US Dollar</option>
+                                <option>EUR - Euro</option>
+                                <option>GBP - British Pound</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" checked> Enable Email Notifications
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" checked> Enable SMS Notifications
+                            </label>
+                        </div>
+                        <button type="button" class="btn btn-primary redirect-404">Save Settings</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sidebarLinks = document.querySelectorAll('.sidebar-menu a[href^="#"]');
+
+            sidebarLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+
+                    // Remove active class from all links
+                    sidebarLinks.forEach(l => l.classList.remove('active'));
+
+                    // Add active class to clicked link
+                    this.classList.add('active');
+
+                    // Scroll to section
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+
+                    if (targetSection) {
+                        targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

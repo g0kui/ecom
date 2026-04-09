@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-left">
+                <div class="top-bar-item">
+                    <i class="fas fa-truck"></i>
+                    <span>Free Next Day Delivery</span>
+                </div>
+            </div>
+            <div class="top-bar-right">
+                <div class="top-bar-item">
+                    <i class="fas fa-headset"></i>
+                    <span>24/7 Customer Support</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo-wrap">
+                <a href="index.html" class="logo">
+                    <img src="images/ecomm logo.png" alt="Stackly Logo" class="logo-img">
+                    Stack<span>ly</span>
+                </a>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for products...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="header-actions">
+                <a href="404.html" class="header-btn">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Location</span>
+                </a>
+                <a href="login.html" class="header-btn">
+                    <i class="fas fa-user"></i>
+                    <span>My Account</span>
+                </a>
+                <a href="404.html" class="header-btn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>Cart</span>
+                    <span class="cart-badge">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <button class="mobile-menu-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="container">
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Section 1: Hero Banner -->
+    <section class="hero" id="section1" data-aos="fade-up">
+        <div class="container">
+            <h1>Our Premium Products</h1>
+            <p>Discover the best selection of quality appliances and electronics</p>
+        </div>
+    </section>
+
+    <!-- Section 2: Kitchen Appliances -->
+    <section class="products" id="section2">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Kitchen Appliances</h2>
+            <div class="product-grid">
+                <div class="product-card" data-aos="zoom-in">
+                    <div class="product-image">
+                        <img src="images/blender.webp" alt="Professional Blender" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3>Professional Blender</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="product-price">$149</div>
+                        <div class="product-actions">
+                            <a href="#" class="btn btn-primary add-to-cart">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="product-image">
+                        <img src="images/coffeemaker.webp" alt="Coffee Maker Deluxe" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3>Coffee Maker Deluxe</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="product-price">$89</div>
+                        <div class="product-actions">
+                            <a href="#" class="btn btn-primary add-to-cart">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="product-image">
+                        <img src="images/toaster.webp" alt="Smart Toaster" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3>Smart Toaster</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <div class="product-price">$59</div>
+                        <div class="product-actions">
+                            <a href="#" class="btn btn-primary add-to-cart">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Refrigeration -->
+    <section class="products" id="section3" style="background: var(--light-bg);">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Refrigeration Solutions</h2>
+            <div class="product-grid">
+                <div class="product-card" data-aos="fade-up">
+                    <div class="product-image">
+                        <img src="images/fridge.webp" alt="Double Door Refrigerator" loading="lazy">
+                        <span class="product-badge">Best Seller</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Double Door Refrigerator</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="product-price">$1299</div>
+                        <div class="product-actions">
+                            <a href="#" class="btn btn-primary add-to-cart">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="product-image">
+                        <img src="images/freezer.webp" alt="Chest Freezer" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3>Chest Freezer</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="product-price">$699</div>
+                        <div class="product-actions">
+                            <a href="#" class="btn btn-primary add-to-cart">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Laundry Solutions -->
+    <section class="products" id="section4">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Laundry Solutions</h2>
+            <div class="product-grid">
+                <div class="product-card" data-aos="slide-up">
+                    <div class="product-image">
+                        <img src="images/4.webp" alt="Front Load Washer" loading="lazy">
+                        <span class="product-badge">New</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Front Load Washer</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="product-price">$849</div>
+                        <div class="product-actions">
+                            <a href="#" class="btn btn-primary add-to-cart">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-aos="slide-up" data-aos-delay="100">
+                    <div class="product-image">
+                        <img src="images/dryer.webp" alt="Electric Dryer" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3>Electric Dryer</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <div class="product-price">$749</div>
+                        <div class="product-actions">
+                            <a href="#" class="btn btn-primary add-to-cart">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Cooking Appliances -->
+    <section class="products" id="section5" style="background: var(--light-bg);">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Cooking Appliances</h2>
+            <div class="product-grid">
+                <div class="product-card" data-aos="flip-left">
+                    <div class="product-image">
+                        <img src="images/stove.webp"Gas Range Stove" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3>Gas Range Stove</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="product-price">$999</div>
+                        <div class="product-actions">
+                            <a href="#" class="btn btn-primary add-to-cart">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-aos="flip-left" data-aos-delay="100">
+                    <div class="product-image">
+                        <img src="images/oven.webp" alt="Convection Oven" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3>Convection Oven</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="product-price">$649</div>
+                        <div class="product-actions">
+                            <a href="#" class="btn btn-primary add-to-cart">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Dishwashers -->
+    <section class="products" id="section6">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Dishwashers</h2>
+            <div class="product-grid">
+                <div class="product-card" data-aos="zoom-in">
+                    <div class="product-image">
+                        <img src="images/dishwaher.webp" alt="Built-in Dishwasher" loading="lazy">
+                        <span class="product-badge">Sale</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Built-in Dishwasher</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="product-price">$549 <span class="old-price">$699</span></div>
+                        <div class="product-actions">
+                            <a href="#" class="btn btn-primary add-to-cart">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="product-image">
+                        <img src="images/portable dishwaher.webp" alt="Portable Dishwasher" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3>Portable Dishwasher</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <div class="product-price">$399</div>
+                        <div class="product-actions">
+                            <a href="#" class="btn btn-primary add-to-cart">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: TVs & Entertainment -->
+    <section class="products" id="section7" style="background: var(--light-bg);">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">TVs & Entertainment</h2>
+            <div class="product-grid">
+                <div class="product-card" data-aos="fade-right">
+                    <div class="product-image">
+                        <img src="images/3.webp" alt="55 Smart TV" loading="lazy">
+                        <span class="product-badge">4K</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>55" Smart TV</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="product-price">$799</div>
+                        <div class="product-actions">
+                            <a href="#" class="btn btn-primary add-to-cart">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-aos="fade-left" data-aos-delay="100">
+                    <div class="product-image">
+                        <img src="images/soundbarsystem.webp" alt="Sound Bar System" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3>Sound Bar System</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="product-price">$299</div>
+                        <div class="product-actions">
+                            <a href="#" class="btn btn-primary add-to-cart">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 8: Air Quality -->
+    <section class="products" id="section8">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Air Quality & Comfort</h2>
+            <div class="product-grid">
+                <div class="product-card" data-aos="zoom-out">
+                    <div class="product-image">
+                        <img src="images/airpurifier.webp" alt="Air Purifier Pro" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3>Air Purifier Pro</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="product-price">$349</div>
+                        <div class="product-actions">
+                            <a href="#" class="btn btn-primary add-to-cart">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-aos="zoom-out" data-aos-delay="100">
+                    <div class="product-image">
+                        <img src="images/humidifier.webp" alt="Smart Humidifier" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3>Smart Humidifier</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <div class="product-price">$129</div>
+                        <div class="product-actions">
+                            <a href="#" class="btn btn-primary add-to-cart">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 9: Vacuum Cleaners -->
+    <section class="products" id="section9" style="background: var(--light-bg);">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Vacuum Cleaners</h2>
+            <div class="product-grid">
+                <div class="product-card" data-aos="slide-right">
+                    <div class="product-image">
+                        <img src="images/robot vaccum.webp" alt="Robot Vacuum" loading="lazy">
+                        <span class="product-badge">Hot</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Robot Vacuum</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="product-price">$449</div>
+                        <div class="product-actions">
+                            <a href="#" class="btn btn-primary add-to-cart">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-aos="slide-left" data-aos-delay="100">
+                    <div class="product-image">
+                        <img src="images/cordeless vaccum.webp" alt="Cordless Vacuum" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3>Cordless Vacuum</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="product-price">$329</div>
+                        <div class="product-actions">
+                            <a href="#" class="btn btn-primary add-to-cart">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 10: Special Offers -->
+    <section class="products" id="section10">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Limited Time Offers</h2>
+            <div class="product-grid">
+                <div class="product-card" data-aos="bounce-in">
+                    <div class="product-image">
+                        <img src="images/laptop.webp" alt="Premium Laptop" loading="lazy">
+                        <span class="product-badge">-30%</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Premium Laptop</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="product-price">$899 <span class="old-price">$1299</span></div>
+                        <div class="product-actions">
+                            <a href="#" class="btn btn-primary add-to-cart">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-aos="bounce-in" data-aos-delay="100">
+                    <div class="product-image">
+                        <img src="images/tablet.webp" alt="Smart Tablet" loading="lazy">
+                        <span class="product-badge">-25%</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Smart Tablet</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="product-price">$449 <span class="old-price">$599</span></div>
+                        <div class="product-actions">
+                            <a href="#" class="btn btn-primary add-to-cart">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-aos="bounce-in" data-aos-delay="200">
+                    <div class="product-image">
+                        <img src="images/headphone.webp" alt="Cordless Vacuum" loading="lazy">
+                        <span class="product-badge">-40%</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Wireless Headphones</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="product-price">$179 <span class="old-price">$299</span></div>
+                        <div class="product-actions">
+                            <a href="#" class="btn btn-primary add-to-cart">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>About Stackly</h3>
+                    <p>Your trusted partner for quality home appliances and electronics.</p>
+                    <div class="social-links">
+                        <a href="404.html" class="external-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="404.html" class="external-link"><i class="fab fa-twitter"></i></a>
+                        <a href="404.html" class="external-link"><i class="fab fa-instagram"></i></a>
+                        <a href="404.html" class="external-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="categories.html">Categories</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="404.html">Contact Us</a></li>
+                        <li><a href="404.html">Shipping Info</a></li>
+                        <li><a href="404.html">Returns</a></li>
+                        <li><a href="404.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Commerce St, City</li>
+                        <li><i class="fas fa-phone"></i> +1 234 567 890</li>
+                        <li><i class="fas fa-envelope"></i> info@stackly.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Stackly. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

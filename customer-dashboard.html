@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Dashboard - el="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h3>Stackly</h3>
+                <p>Customer Portal</p>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="#overview" class="active"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="#orders"><i class="fas fa-shopping-bag"></i> My Orders</a></li>
+                <li><a href="#wishlist"><i class="fas fa-heart"></i> Wishlist</a></li>
+                <li><a href="#profile"><i class="fas fa-user"></i> Profile</a></li>
+                <li><a href="#addresses"><i class="fas fa-map-marker-alt"></i> Addresses</a></li>
+                <li><a href="#payment"><i class="fas fa-credit-card"></i> Payment Methods</a></li>
+                <li><a href="#notifications"><i class="fas fa-bell"></i> Notifications</a></li>
+                <li><a href="#settings"><i class="fas fa-cog"></i> Settings</a></li>
+                <li><a href="404.html" class="redirect-404"><i class="fas fa-ticket-alt"></i> Support</a></li>
+                <li><a href="index.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="dashboard-header">
+                <div>
+                    <h1>Customer Dashboard</h1>
+                    <p>Welcome back, John!</p>
+                </div>
+                <div class="header-actions">
+                    <a href="404.html" class="btn btn-primary redirect-404">New Order</a>
+                    <button class="sidebar-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="dashboard-content">
+                <!-- Overview Section -->
+                <div class="dashboard-section" id="overview">
+                    <h2>Overview</h2>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <h3>Total Orders</h3>
+                            <div class="stat-value">24</div>
+                            <div class="stat-icon"><i class="fas fa-shopping-bag"></i></div>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Pending Orders</h3>
+                            <div class="stat-value">3</div>
+                            <div class="stat-icon"><i class="fas fa-clock"></i></div>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Wishlist Items</h3>
+                            <div class="stat-value">12</div>
+                            <div class="stat-icon"><i class="fas fa-heart"></i></div>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Rewards Points</h3>
+                            <div class="stat-value">850</div>
+                            <div class="stat-icon"><i class="fas fa-gift"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Orders Section -->
+                <div class="dashboard-section" id="orders">
+                    <h2>Recent Orders</h2>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Date</th>
+                                <th>Total</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="Order ID">#12345</td>
+                                <td data-label="Date">2024-01-15</td>
+                                <td data-label="Total">$899.00</td>
+                                <td data-label="Status"><span style="color: var(--success); font-weight: bold;">Delivered</span></td>
+                                <td data-label="Action"><a href="404.html" class="btn btn-primary redirect-404">View</a></td>
+                            </tr>
+                            <tr>
+                                <td data-label="Order ID">#12344</td>
+                                <td data-label="Date">2024-01-10</td>
+                                <td data-label="Total">$449.00</td>
+                                <td data-label="Status"><span style="color: var(--warning); font-weight: bold;">In Transit</span></td>
+                                <td data-label="Action"><a href="404.html" class="btn btn-primary redirect-404">Track</a></td>
+                            </tr>
+                            <tr>
+                                <td data-label="Order ID">#12343</td>
+                                <td data-label="Date">2024-01-05</td>
+                                <td data-label="Total">$299.00</td>
+                                <td data-label="Status"><span style="color: var(--primary-color); font-weight: bold;">Processing</span></td>
+                                <td data-label="Action"><a href="404.html" class="btn btn-primary redirect-404">View</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Wishlist Section -->
+                <div class="dashboard-section" id="wishlist">
+                    <h2>My Wishlist</h2>
+                    <div class="product-grid">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <i class="fas fa-laptop"></i>
+                            </div>
+                            <div class="product-info">
+                                <h3>Premium Laptop</h3>
+                                <div class="product-price">$899</div>
+                                <div class="product-actions">
+                                    <a href="404.html" class="btn btn-primary redirect-404">Add to Cart</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-image">
+                                <i class="fas fa-headphones"></i>
+                            </div>
+                            <div class="product-info">
+                                <h3>Wireless Headphones</h3>
+                                <div class="product-price">$179</div>
+                                <div class="product-actions">
+                                    <a href="404.html" class="btn btn-primary redirect-404">Add to Cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Profile Section -->
+                <div class="dashboard-section" id="profile">
+                    <h2>Profile Information</h2>
+                    <form>
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" value="John Doe" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" value="john.doe@example.com" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Phone</label>
+                            <input type="tel" value="+1 234 567 890" class="form-control">
+                        </div>
+                        <button type="submit" class="btn btn-primary redirect-404">Update Profile</button>
+                    </form>
+                </div>
+
+                <!-- Addresses Section -->
+                <div class="dashboard-section" id="addresses">
+                    <h2>Saved Addresses</h2>
+                    <div class="category-grid">
+                        <div class="category-card">
+                            <div class="category-info">
+                                <h3>Home Address</h3>
+                                <p>123 Main Street<br>City, State 12345<br>United States</p>
+                                <div style="margin-top: 15px;">
+                                    <a href="404.html" class="btn btn-primary redirect-404">Edit</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="category-card">
+                            <div class="category-info">
+                                <h3>Work Address</h3>
+                                <p>456 Office Blvd<br>City, State 67890<br>United States</p>
+                                <div style="margin-top: 15px;">
+                                    <a href="404.html" class="btn btn-primary redirect-404">Edit</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Payment Methods Section -->
+                <div class="dashboard-section" id="payment">
+                    <h2>Payment Methods</h2>
+                    <div class="category-grid">
+                        <div class="category-card">
+                            <div class="category-image">
+                                <i class="fas fa-credit-card"></i>
+                            </div>
+                            <div class="category-info">
+                                <h3>Visa ****1234</h3>
+                                <p>Expires: 12/25</p>
+                                <div style="margin-top: 15px;">
+                                    <a href="404.html" class="btn btn-primary redirect-404">Edit</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="category-card">
+                            <div class="category-image">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                            <div class="category-info">
+                                <h3>Add New Card</h3>
+                                <div style="margin-top: 15px;">
+                                    <a href="404.html" class="btn btn-primary redirect-404">Add</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Notifications Section -->
+                <div class="dashboard-section" id="notifications">
+                    <h2>Recent Notifications</h2>
+                    <div style="padding: 20px; background: var(--light-bg); border-radius: 5px; margin-bottom: 15px;">
+                        <h4 style="margin-bottom: 10px; color: var(--secondary-color);">
+                            <i class="fas fa-check-circle" style="color: var(--success);"></i> Order Delivered
+                        </h4>
+                        <p>Your order #12345 has been delivered successfully.</p>
+                        <small style="color: #666;">2 hours ago</small>
+                    </div>
+                    <div style="padding: 20px; background: var(--light-bg); border-radius: 5px; margin-bottom: 15px;">
+                        <h4 style="margin-bottom: 10px; color: var(--secondary-color);">
+                            <i class="fas fa-truck" style="color: var(--primary-color);"></i> Order Shipped
+                        </h4>
+                        <p>Your order #12344 is out for delivery.</p>
+                        <small style="color: #666;">1 day ago</small>
+                    </div>
+                </div>
+
+                <!-- Settings Section -->
+                <div class="dashboard-section" id="settings">
+                    <h2>Account Settings</h2>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" checked> Email Notifications
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" checked> Order Updates
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox"> Promotional Emails
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" checked> SMS Notifications
+                        </label>
+                    </div>
+                    <button class="btn btn-primary redirect-404">Save Settings</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sidebarLinks = document.querySelectorAll('.sidebar-menu a[href^="#"]');
+
+            sidebarLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+
+                    // Remove active class from all links
+                    sidebarLinks.forEach(l => l.classList.remove('active'));
+
+                    // Add active class to clicked link
+                    this.classList.add('active');
+
+                    // Scroll to section
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+
+                    if (targetSection) {
+                        targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

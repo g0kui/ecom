@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar animate__animated animate__fadeInDown">
+        <div class="container">
+            <div class="top-bar-left">
+                <div class="top-bar-item">
+                    <i class="fas fa-truck"></i>
+                    <span>Free Next Day Delivery</span>
+                </div>
+                <div class="top-bar-item">
+                    <i class="fas fa-sync"></i>
+                    <span>Free Removal & Recycling</span>
+                </div>
+            </div>
+            <div class="top-bar-right">
+                <div class="top-bar-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Legendary Value Promise</span>
+                </div>
+                <div class="top-bar-item">
+                    <i class="fas fa-headset"></i>
+                    <span>24/7 Customer Support</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header animate__animated animate__fadeIn">
+        <div class="container">
+            <div class="logo-wrap">
+                <a href="index.html" class="logo">
+                    <img src="images/ecomm logo.png" alt="Stackly Logo" class="logo-img">
+                    Stack<span>ly</span>
+                </a>
+            </div>
+            
+            <div class="search-bar">
+                <input type="text" placeholder="Search for products...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+
+            <div class="header-actions">
+                <a href="404.html" class="header-btn">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Location</span>
+                </a>
+                <a href="login.html" class="header-btn">
+                    <i class="fas fa-user"></i>
+                    <span>My Account</span>
+                </a>
+                <a href="404.html" class="header-btn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>Cart</span>
+                    <span class="cart-badge">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <button class="mobile-menu-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="container">
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" data-aos="fade-up">
+        <div class="container">
+            <h1 class="animate__animated animate__fadeInUp">Welcome to Stackly</h1>
+            <p class="animate__animated animate__fadeInUp animate__delay-1s">Your Premier Ecommerce Destination for Quality Products</p>
+            <a href="404.html" class="btn animate__animated animate__zoomIn animate__delay-2s">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Shop by Category</h2>
+            <div class="category-grid">
+                <div class="category-card animate-on-scroll" data-aos="fade-up" data-aos-delay="100">
+                    <div class="category-image">
+                        <img src="images/1.webp" alt="Small Appliances" loading="lazy">
+                    </div>
+                    <div class="category-info">
+                        <h3>Small Appliances</h3>
+                        <p>Kitchen essentials and more</p>
+                    </div>
+                </div>
+
+                <div class="category-card animate-on-scroll" data-aos="fade-up" data-aos-delay="200">
+                    <div class="category-image">
+                        <img src="images/2.webp" alt="Heating & Cooling" loading="lazy">
+                    </div>
+                    <div class="category-info">
+                        <h3>Heating & Cooling</h3>
+                        <p>Comfort all year round</p>
+                    </div>
+                </div>
+
+                <div class="category-card animate-on-scroll" data-aos="fade-up" data-aos-delay="300">
+                    <div class="category-image">
+                        <img src="images/3.webp" alt="TVs & Electronics" loading="lazy">
+                    </div>
+                    <div class="category-info">
+                        <h3>TVs & Electronics</h3>
+                        <p>Latest technology</p>
+                    </div>
+                </div>
+
+                <div class="category-card animate-on-scroll" data-aos="fade-up" data-aos-delay="400">
+                    <div class="category-image">
+                        <img src="images/4.webp" alt="Laundry Appliances" loading="lazy">
+                    </div>
+                    <div class="category-info">
+                        <h3>Laundry Appliances</h3>
+                        <p>Washers and dryers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="products" id="products">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Hot Offers</h2>
+            <div class="product-grid">
+                <div class="product-card" data-aos="zoom-in">
+                    <div class="product-image">
+                        <img src="images/fridge.webp" alt="Premium Refrigerator" loading="lazy">
+                        <span class="product-badge">Sale</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Premium Refrigerator</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="product-price">
+                            $899
+                            <span class="old-price">$1299</span>
+                        </div>
+                        <div class="product-actions">
+                            <a href="404.html" class="btn btn-primary add-to-cart redirect-404">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="product-image">
+                        <img src="images/4.webp" alt="Smart Washing Machine" loading="lazy">
+                        <span class="product-badge">New</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Smart Washing Machine</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="product-price">$749</div>
+                        <div class="product-actions">
+                            <a href="404.html" class="btn btn-primary add-to-cart redirect-404">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="product-image">
+                        <img src="images/oven.webp" alt="Digital Microwave Oven" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3>Digital Microwave Oven</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <div class="product-price">$299</div>
+                        <div class="product-actions">
+                            <a href="404.html" class="btn btn-primary add-to-cart redirect-404">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="product-image">
+                        <img src="images/2.webp" alt="Air Conditioner Pro" loading="lazy">
+                        <span class="product-badge">Hot</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Air Conditioner Pro</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="product-price">
+                            $599
+                            <span class="old-price">$799</span>
+                        </div>
+                        <div class="product-actions">
+                            <a href="404.html" class="btn btn-primary add-to-cart redirect-404">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Why Choose Stackly?</h2>
+            <div class="features-grid">
+                <div class="feature-card" data-aos="flip-left">
+                    <div class="feature-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3>Fast Delivery</h3>
+                    <p>Free next-day delivery on all orders</p>
+                </div>
+
+                <div class="feature-card" data-aos="flip-left" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Secure Shopping</h3>
+                    <p>100% secure payment processing</p>
+                </div>
+
+                <div class="feature-card" data-aos="flip-left" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-undo"></i>
+                    </div>
+                    <h3>Easy Returns</h3>
+                    <p>30-day money-back guarantee</p>
+                </div>
+
+                <div class="feature-card" data-aos="flip-left" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Always here to help you</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter" data-aos="fade-up">
+        <div class="container">
+            <h2>Subscribe to Our Newsletter</h2>
+            <p>Get the latest updates on new products and exclusive offers!</p>
+            <form class="newsletter-form">
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>About Stackly</h3>
+                    <p>Your trusted partner for quality home appliances and electronics. We bring you the best products at unbeatable prices.</p>
+                    <div class="social-links">
+                        <a href="404.html" class="external-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="404.html" class="external-link"><i class="fab fa-twitter"></i></a>
+                        <a href="404.html" class="external-link"><i class="fab fa-instagram"></i></a>
+                        <a href="404.html" class="external-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="categories.html">Categories</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="404.html">Contact Us</a></li>
+                        <li><a href="404.html">Shipping Info</a></li>
+                        <li><a href="404.html">Returns</a></li>
+                        <li><a href="404.html">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Commerce St, City</li>
+                        <li><i class="fas fa-phone"></i> +1 234 567 890</li>
+                        <li><i class="fas fa-envelope"></i> info@stackly.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Stackly. All rights reserved. | <a href="404.html">Privacy Policy</a> | <a href="404.html">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/circletype/2.3.0/circletype.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.appear/0.4.1/jquery.appear.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jarallax@2/dist/jarallax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.0/nouislider.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wnumb/1.2.0/wNumb.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box animate__animated animate__zoomIn">
+            <div class="login-header">
+                <h2>Welcome to Stackly</h2>
+                <p>Login to your account</p>
+            </div>
+
+            <div class="login-body">
+                <div class="login-options">
+                    <div class="login-option active" data-login-type="customer">
+                        <i class="fas fa-user"></i>
+                        <div>Customer Login</div>
+                    </div>
+                    <div class="login-option" data-login-type="admin">
+                        <i class="fas fa-user-shield"></i>
+                        <div>Admin Login</div>
+                    </div>
+                </div>
+
+                <form id="loginForm">
+                    <input type="hidden" id="login-type" value="customer">
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="Enter your email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required placeholder="Enter your password">
+                    </div>
+
+                    <div class="forgot-password">
+                        <a href="404.html">Forgot Password?</a>
+                    </div>
+
+                    <button type="submit" class="login-btn">Login</button>
+
+                    <div class="signup-link">
+                        Don't have an account? <a href="create-account.html">Create Account</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const loginForm = document.getElementById('loginForm');
+            const loginOptions = document.querySelectorAll('.login-option');
+            const loginTypeInput = document.getElementById('login-type');
+
+            loginOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    loginOptions.forEach(opt => opt.classList.remove('active'));
+                    this.classList.add('active');
+                    loginTypeInput.value = this.getAttribute('data-login-type');
+                });
+            });
+
+            loginForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const loginType = loginTypeInput.value;
+                const email = document.getElementById('email').value;
+                const password = document.getElementById('password').value;
+
+                if (email && password) {
+                    // Redirect to appropriate dashboard based on login type
+                    if (loginType === 'customer') {
+                        window.location.href = 'customer-dashboard.html';
+                    } else {
+                        window.location.href = 'admin-dashboard.html';
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

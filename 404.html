@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <div class="error-page">
+        <div class="error-content animate__animated animate__bounceIn">
+            <div class="error-code">404</div>
+            <h2>Oops! Page Not Found</h2>
+            <p>The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
+
+            <div class="error-actions">
+                <a href="#" class="btn btn-primary back-btn">
+                    <i class="fas fa-arrow-left"></i> Go Back
+                </a>
+                <a href="index.html" class="btn btn-secondary">
+                    <i class="fas fa-home"></i> Home Page
+                </a>
+                <a href="products.html" class="btn btn-primary">
+                    <i class="fas fa-shopping-bag"></i> Browse Products
+                </a>
+            </div>
+
+           
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const backButton = document.querySelector('.back-btn');
+
+            if (backButton) {
+                backButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+
+                    // Check if there's a previous page in history
+                    if (document.referrer && document.referrer !== window.location.href) {
+                        window.history.back();
+                    } else {
+                        // If no referrer, go to homepage
+                        window.location.href = 'index.html';
+                    }
+                });
+            }
+
+            // Add some animation to the error code
+            const errorCode = document.querySelector('.error-code');
+            if (errorCode) {
+                setInterval(function() {
+                    errorCode.style.transform = 'scale(1.05)';
+                    setTimeout(function() {
+                        errorCode.style.transform = 'scale(1)';
+                    }, 500);
+                }, 2000);
+            }
+        });
+    </script>
+</body>
+</html>
