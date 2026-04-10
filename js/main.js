@@ -10,6 +10,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Close mobile menu on link click
+    const navLinks = document.querySelectorAll('.nav-list a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            mainNav.classList.remove('active');
+        });
+    });
+
     // Sidebar toggle for dashboard
     const sidebarToggle = document.querySelector('.sidebar-toggle');
     const sidebar = document.querySelector('.sidebar');

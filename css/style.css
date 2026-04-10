@@ -1060,6 +1060,10 @@ html,body {
     
     .sidebar-toggle {
         display: block;
+        position: fixed;
+        right: 20px;
+        top: 20px;
+        z-index: 1002;
     }
     
     .category-grid,
@@ -1100,6 +1104,7 @@ html,body {
     .header-actions {
         order: 2;
         gap: 15px;
+        margin-left: auto;
     }
     
     .search-bar {
@@ -1129,25 +1134,54 @@ html,body {
     
     .mobile-menu-toggle {
         display: block;
-        position: absolute;
+        position: fixed;
         right: 20px;
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: 1001;
+        top: 20px;
+        z-index: 1002;
+        background: var(--primary-color);
+        color: var(--white);
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 18px;
     }
     
     .main-nav {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
+        display: block;
+        position: relative;
         background: var(--primary-color);
         z-index: 1000;
     }
-    
-    .main-nav.active {
-        display: block;
+
+    .main-nav .nav-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 250px;
+        height: 100vh;
+        background: var(--primary-color);
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        z-index: 999;
+    }
+
+    .main-nav.active .nav-list {
+        transform: translateX(0);
+    }
+
+    .nav-list li a {
+        padding: 15px 20px;
+        border-left: 3px solid transparent;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .nav-list li a:hover {
+        border-left-color: var(--white);
+        background: rgba(255,255,255,0.1);
     }
     
     .hero h1 {
@@ -1236,9 +1270,9 @@ html,body {
     }
     
     .header-actions {
-        flex: 1 1 auto;
+        flex: 0 0 auto;
         gap: 8px;
-        min-width: 70px;
+        margin-left: auto;
     }
     
     .header-btn {
@@ -1282,27 +1316,47 @@ html,body {
     /* Navigation fixes */
     .mobile-menu-toggle {
         display: block;
-        position: absolute;
-        right: 12px;
-        top: 10px;
-        font-size: 18px;
-        padding: 0;
-        background: transparent;
+        position: fixed;
+        right: 15px;
+        top: 15px;
+        z-index: 1002;
+        background: var(--primary-color);
+        color: var(--white);
+        border: none;
+        padding: 8px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
     }
     
     .main-nav {
         position: relative;
+        background: var(--primary-color);
     }
     
     .nav-list {
         flex-direction: column;
         gap: 0;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 200px;
+        height: 100vh;
+        background: var(--primary-color);
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        z-index: 999;
+    }
+
+    .main-nav.active .nav-list {
+        transform: translateX(0);
     }
     
     .nav-list li a {
-        padding: 10px 12px;
-        font-size: 12px;
-        border-left: 3px solid transparent;
+        padding: 12px 15px;
+        font-size: 11px;
+        border-left: none;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
     }
     
     .nav-list li a:hover {
@@ -1336,10 +1390,18 @@ html,body {
     }
     
     .sidebar {
-        width: 100%;
-        height: auto;
-        position: static;
-        margin-left: 0;
+        width: 250px;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: 999;
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
     }
     
     .sidebar-header {
@@ -1357,21 +1419,15 @@ html,body {
     
     .sidebar-menu {
         display: flex;
-        flex-wrap: wrap;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease;
+        flex-direction: column;
+        max-height: none;
+        overflow: visible;
     }
-    
-    .sidebar.active .sidebar-menu {
-        max-height: 500px;
-    }
-    
+
     .sidebar-menu li {
-        flex: 1 1 50%;
-        min-width: 120px;
+        flex: none;
     }
-    
+
     .sidebar-menu li a {
         padding: 10px 12px;
         font-size: 12px;
@@ -1415,10 +1471,13 @@ html,body {
     }
     
     .sidebar-toggle {
-        flex: 0 0 auto;
+        display: block;
+        position: fixed;
+        right: 15px;
+        top: 15px;
+        z-index: 1002;
         padding: 8px 12px;
         font-size: 16px;
-        
     }
     
     .dashboard-header .btn {
