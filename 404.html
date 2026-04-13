@@ -41,11 +41,17 @@
                 backButton.addEventListener('click', function(e) {
                     e.preventDefault();
 
-                    // Check if there's a previous page in history
-                    if (document.referrer && document.referrer !== window.location.href) {
+                    const returnToPage = sessionStorage.getItem('returnToPage');
+                    if (returnToPage && returnToPage !== window.location.href) {
+                        sessionStorage.removeItem('returnToPage');
+                        window.location.href = returnToPage;
+                        return;
+                    }
+
+                    // Go back if there is a previous history entry, otherwise go home.
+                    if (window.history.length > 1) {
                         window.history.back();
                     } else {
-                        // If no referrer, go to homepage
                         window.location.href = 'index.html';
                     }
                 });

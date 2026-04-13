@@ -1114,37 +1114,9 @@ html,body {
         flex-basis: 100%;
     }
     
-    .nav-list {
-        flex-direction: column;
-        gap: 0;
-    }
-    
-    .nav-list li {
-        width: 100%;
-    }
-    
-    .nav-list li a {
-        padding: 14px 20px;
-        border-left: 3px solid transparent;
-    }
-    
-    .nav-list li a:hover {
-        border-left-color: var(--white);
-    }
     
     .mobile-menu-toggle {
-        display: block;
-        position: fixed;
-        right: 20px;
-        top: 20px;
-        z-index: 1002;
-        background: var(--primary-color);
-        color: var(--white);
-        border: none;
-        padding: 10px;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 18px;
+        display: none;
     }
     
     .main-nav {
@@ -1156,32 +1128,46 @@ html,body {
 
     .main-nav .nav-list {
         display: flex;
-        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-between;
         gap: 0;
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: 250px;
-        height: 100vh;
-        background: var(--primary-color);
-        transform: translateX(100%);
-        transition: transform 0.3s ease;
-        z-index: 999;
+        position: static;
+        width: 100%;
+        height: auto;
+        background: transparent;
+        transform: none;
+        transition: none;
+        z-index: 1;
+        padding: 0;
+        overflow-x: hidden;
+        white-space: normal;
     }
 
     .main-nav.active .nav-list {
-        transform: translateX(0);
+        transform: none;
+    }
+
+    .nav-list li {
+        flex: 1 1 0;
+        min-width: 0;
+        max-width: 25%;
     }
 
     .nav-list li a {
-        padding: 15px 20px;
-        border-left: 3px solid transparent;
-        border-bottom: 1px solid rgba(255,255,255,0.1);
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 8px 5px;
+        font-size: 11px;
+        line-height: 1.2;
+        border-left: none;
+        border-bottom: none;
+        border-radius: 8px;
     }
 
     .nav-list li a:hover {
-        border-left-color: var(--white);
-        background: rgba(255,255,255,0.1);
+        background: rgba(255,255,255,0.15);
     }
     
     .hero h1 {
@@ -1315,18 +1301,7 @@ html,body {
     
     /* Navigation fixes */
     .mobile-menu-toggle {
-        display: block;
-        position: fixed;
-        right: 15px;
-        top: 15px;
-        z-index: 1002;
-        background: var(--primary-color);
-        color: var(--white);
-        border: none;
-        padding: 8px;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 16px;
+        display: none;
     }
     
     .main-nav {
@@ -1334,35 +1309,6 @@ html,body {
         background: var(--primary-color);
     }
     
-    .nav-list {
-        flex-direction: column;
-        gap: 0;
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: 200px;
-        height: 100vh;
-        background: var(--primary-color);
-        transform: translateX(100%);
-        transition: transform 0.3s ease;
-        z-index: 999;
-    }
-
-    .main-nav.active .nav-list {
-        transform: translateX(0);
-    }
-    
-    .nav-list li a {
-        padding: 12px 15px;
-        font-size: 11px;
-        border-left: none;
-        border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
-    
-    .nav-list li a:hover {
-        border-left-color: var(--white);
-        background: rgba(255,255,255,0.1);
-    }
     
     .hero h1 {
         font-size: 22px;

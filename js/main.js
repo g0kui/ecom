@@ -152,6 +152,21 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Redirect any element with redirect-404 class to 404 page
+    const redirect404Elements = document.querySelectorAll('.redirect-404');
+    redirect404Elements.forEach(element => {
+        element.addEventListener('click', function(e) {
+            sessionStorage.setItem('returnToPage', window.location.href);
+
+            if (this.tagName.toLowerCase() === 'a' && this.getAttribute('href') === '404.html') {
+                return;
+            }
+
+            e.preventDefault();
+            window.location.href = '404.html';
+        });
+    });
+
     // Category cards redirect to 404
     const categoryCards = document.querySelectorAll('.category-card');
     categoryCards.forEach(card => {
